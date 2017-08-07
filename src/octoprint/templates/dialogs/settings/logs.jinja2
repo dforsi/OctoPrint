@@ -16,12 +16,12 @@
         </tr>
         </thead>
         <tbody data-bind="foreach: listHelper.paginatedItems">
-        <tr data-bind="attr: {title: name}">
+        <tr>
             <td class="settings_logs_name" data-bind="text: name"></td>
             <td class="settings_logs_size" data-bind="text: formatSize(size)"></td>
             <td class="settings_logs_date" data-bind="text: formatDate(date)"></td>
             <td class="settings_logs_action">
-                <a href="#" class="fa fa-trash-o" data-bind="click: function() { if ($root.loginState.isUser()) { $parent.removeFile($data.name); } else { return; } }, css: {disabled: !$root.loginState.isUser()}"></a>&nbsp;|&nbsp;<a href="#" class="fa fa-download" data-bind="attr: {href: refs.download}"></a>
+                <a href="#" class="fa fa-trash-o" data-bind="click: function() { if ($root.loginState.isUser()) { $parent.removeFile($data.name); } else { return; } }, css: {disabled: !$root.loginState.isUser()}, attr: {title: _.sprintf('{{ _("Delete %%(name)s")|escape }}', $data)}"></a>&nbsp;|&nbsp;<a href="#" class="fa fa-download" data-bind="attr: {href: refs.download, title: _.sprintf('{{ _("Download %%(name)s")|escape }}', $data)}"></a>
             </td>
         </tr>
         </tbody>
