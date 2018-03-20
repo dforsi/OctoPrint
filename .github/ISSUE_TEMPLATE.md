@@ -76,6 +76,8 @@ Can be found in the lower left corner of the web interface. ALWAYS INCLUDE.
 OctoPi, Linux, Windows, MacOS, something else? With version please.
 OctoPi's version can be found in /etc/octopi_version or in the lower left
 corner of the web interface.
+A generic Linux's version can be found with the command
+lsb_release --short --description
 -->
 
 #### Printer model & used firmware incl. version
